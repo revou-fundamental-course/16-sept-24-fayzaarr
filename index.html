@@ -3,10 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RFSYNYZ's Website</title>
     <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
     
+    <header class="main-header">
+        <!-- logo -->
+        <div class="logo-icon"></div>
+
+        <!-- navbar -->
+        <nav>
+            <a href="#section-home">Home</a>
+            <a href="#section-our-profile">About</a>
+            <a href="#section-portofolio">Projects</a>
+            <a href="#section-message-us">Contact</a>
+        </nav>
+    </header>
+
+    <br>
+
+    <main>
+        <!-- home -->
+        <section id="section-home">
+            <header  class="sec-home">
+                <h1>Hello <span id="userjs" class="userjs">User</span>, I'm <span class="myname">Rifasya</span>. Nice to meet you!</h1>
+                <P>I'm a <span class="myname">Fresh graduate</span> in Informatics with a passion for growing <br> skills as a <span class="myname">Frontend Engineer</span></P>
+            </header>
+    
+            <article>
+                <!-- photo banner -->
+                <div class="slideshow-container">
+                    <img class="img-slideshow" src="assets/banner.jpg" style="display: block;" >
+                    <img class="img-slideshow" src="assets/1.jpg" >
+                    <img class="img-slideshow" src="assets/2.jpg" >
+                </div>
+            </article>
+        </section>
+
+        <!-- our profile -->
+        <section id="section-our-profile" class="sec-prof">
+            <div class="aboutme">
+                <div>
+                    <img src="assets/prof2-edit.jpeg" class="prof-img">
+                </div>
+
+                <div class="prof-content">
+                    <header>
+                        <h1 class="titleprof">About <span class="myname">Me</span></h1>
+                    </header> 
+
+                    <p>Hello, I'm <span class="myname">Rifasya </span>Ayu Nurfayza</p>
+                    <p>I am a <span class="myname">fresh graduate</span> with a <span class="myname">Bachelor's degree in Informatics</span>, eager to enhance my skills in <span class="myname">frontend engineering</span> with a <span class="myname">conscientious</span> individual, <span class="myname">meticulous</span> in my work and <span class="myname">attentive to detail</span>, ensuring the development of <span class="myname">user-friendly systems</span> in every project.</p>
+                    <input type="button" value="CV">
+                </div>
+            </div>
+        </section>
+
+        <!-- port -->
+        <section id="section-portofolio" class="sec-port">
+            <header>
+                <h1>Projects</h1>
+            </header>
+        
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-container">
+                    <div class="project-content">
+                        <h3 class="myname">Library Website</h3>
+                        <h2>E-Perpus</h2>
+                        <p>A simple library application was created using an admin template from AdminLTE.io and using the PHP MySQLI programming language.</p>
+                        <a href="https://github.com/fayzaarr/codee-perpus.git" target="_blank" class="view-project">View Project</a>
+                    </div>
+                </div>
+        
+                <!-- Project 2 -->
+                <div class="project-container">
+                    <div class="project-content">
+                        <h3 class="myname">Application</h3>
+                        <h2>Attendance System</h2>
+                        <p>This system is an attendance system application that can detect faces in real time using the Local Binary Pattern Histogram (LBPH) Method and Haar Cascade Classifier for the attendance of employees of PT Elektrindodaya Pakarnusa, Bandung, West Java, Indonesia.</p>
+                        <a href="https://github.com/fayzaarr/sistem-absensi-LBPH.git" target="_blank" class="view-project">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-container">
+                    <div class="project-content">
+                        <h3 class="myname">Web Development</h3>
+                        <h2>Personal Portfolio</h2>
+                        <p>A personal portfolio website to showcase projects, skills, and experiences, built using HTML, CSS, and JavaScript.</p>
+                        <a href="https://github.com/your-github-link-2" target="_blank" class="view-project">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- message us -->
+        <section id="section-message-us" class="sec-mess">
+            <header>
+                <h1>Contact</h1>
+            </header>
+
+            <div class="message-display">
+                <!-- form -->
+                <form name="message-form" onsubmit="return validateForm()">
+                    <div>
+                        <label for="name">Name</label>
+                        <span>:</span>
+                        <input type="text" id="name" name="full-name" placeholder="Type your name here" ><br>
+                    </div>
+            
+                    <div>
+                        <label for="tgl-submit">Date</label>
+                        <span>:</span>
+                        <input type="date" id="tgl-submit" name="birth-date" ><br>
+                    </div>
+            
+                    <div>
+                        <label for="jeniskelamin">Gender</label>
+                        <span>:</span>
+                        <input type="radio" id="laki" name="genders" value="Man" >
+                        <label for="laki">Man</label>
+                        <input type="radio" id="perempuan" name="genders" value="Woman" >
+                        <label for="perempuan">Woman</label><br>
+                    </div>
+            
+                    <div>
+                        <label for="pesan">Message</label>
+                        <span>:</span><br>
+                        <textarea name="messages" id="pesan" placeholder="Type your message here" ></textarea><br>
+                    </div>
+            
+                    <input type="submit" id="submit" name="submit" value="Submit">
+                </form>
+            
+                <!-- result form -->
+                <div class="result-form" id="result-form">
+                    <h3>Submission Results : </h3>
+                    <p>Nama: <span id="sender-full-name"></span></p>
+                    <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                    <p>Pesan: <span id="sender-message"></span></p>
+                </div>
+            </div>
+            
+        </section>
+        <hr />
+    </main>
+
+    <footer>
+        Made By Rifasya @2024
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
